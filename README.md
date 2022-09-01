@@ -1,5 +1,5 @@
 # api-fastapi
-URL: https://fastapi-akash.herokuapp.com/docs <br>
+URL: https://fastapi-akash.herokuapp.com <br>
 <pre> {"message":"welcome to API "}</pre>
 
 ## Student API created from FASTAPI PYTHON
