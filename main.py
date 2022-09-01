@@ -36,33 +36,33 @@ students = [
 # Home Page Message
 @app.get("/")
 async def root():
-    return {'message':'welcome'}
+    return {'message':'welcome to API '}
 
-# All Cars
+# All Students
 @app.get("/students")
 def get_students():
     return students
 
-# Single Car
+# Single Student
 @app.get("/student/{student_id}")
-def get_car(student_id:int):
+def get_Student(student_id:int):
     return students[student_id-1]
 
 # Delete
 @app.delete("/student/{student_id}")
-def delete_car(student_id:int):
+def delete_Student(student_id:int):
     students.pop(student_id)
     return {"message":"Movie has been deleted successfully"}
 
 # Adding - POST
-@app.post("/create_car")
-def create_car(student:dict):
+@app.post("/create_Student")
+def create_Student(student:dict):
     students.append(student)
     return students[-1]
 
-# Update Car
-@app.post("/update_car")
-def update_car(student_id:int, student:dict):
+# Update Student
+@app.post("/update_Student")
+def update_Student(student_id:int, student:dict):
     student_updated = students[student_id]
     student_updated['name'] = student['name'] 
     student_updated['class'] = student['class'] 
