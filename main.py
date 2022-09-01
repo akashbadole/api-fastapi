@@ -70,7 +70,7 @@ def update_car(student_id:int, student:dict):
     students[student_id] = student_updated
     return student_updated
 
-web: gunicorn main:app --host=0.0.0.0 --port=${PORT:-5000}
+web: gunicorn main:app -k whispering-anchorage-28200.herokuapp.com/
 
 # pip install fastapi
 # pip install "uvicorn[standard]"
